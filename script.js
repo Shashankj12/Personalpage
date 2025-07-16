@@ -18,3 +18,19 @@ function toggleCoursework(id) {
   section.classList.toggle('hidden');
 }
 
+function openModal() {
+  document.getElementById("courseworkModal").classList.remove("hidden");
+}
+
+function closeModal() {
+  document.getElementById("courseworkModal").classList.add("hidden");
+}
+
+// Close modal if user clicks outside the modal content
+window.onclick = function(event) {
+  const modal = document.getElementById("courseworkModal");
+  if (event.target === modal) {
+    closeModal();
+  }
+}
+
