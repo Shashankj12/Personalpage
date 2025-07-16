@@ -101,6 +101,15 @@ footer {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+.experience-entry {
+  background: white;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-left: 4px solid #007acc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
 .timeline {
   color: #007acc;
   font-weight: bold;
@@ -150,4 +159,20 @@ footer {
 .hidden {
   display: none;
 }
+
+.project-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #007acc;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.2s ease, color 0.2s ease;
+}
+
+.project-link:hover {
+  color: #005fa3;
+  border-bottom: 2px solid #005fa3;
+}
+
 
