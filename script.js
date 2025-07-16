@@ -13,3 +13,8 @@ window.onload = () => {
   loadHTML("experience-content", "experience.html");
 };
 
+function toggleCoursework(id) {
+  const section = document.getElementById(id);
+  section.classList.toggle('hidden');
+}
+
