@@ -86,3 +86,9 @@ footer {
   background-color: #005fa3;
 }
 
+.container {
+  max-width: 900px;     /* Limit width for readability */
+  margin: 0 auto;       /* Center horizontally */
+  padding: 0 1rem;      /* Small padding on the sides for mobile */
+}
+
