@@ -1,34 +1,54 @@
 <div class="education-entry">
   <h3>MSc in Mathematical Modelling in Engineering</h3>
   <p><strong>Erasmus Mundus Joint Degree</strong></p>
-  <p>University of L’Aquila, Italy (1 Semester) / University of Hamburg, Germany (3 Semesters)</p>
+  <p><strong>University of L’Aquila, Italy</strong> (1 Semester) / <strong>University of Hamburg, Germany</strong> (3 Semesters)</p>
   <p class="timeline"><strong>Sep 2015 – Oct 2017</strong></p>
   
-  <button class="toggle-button" onclick="openModal()">Show Coursework</button>
+  <button class="toggle-button" onclick="openModal('mscModal')">Show Coursework</button>
 
-  <img src="images/xyz-logo.png" alt="University Logo" width="100" />
+  <!-- <img src="images/xyz-logo.png" alt="University Logo" width="100" /> -->
 </div>
 
 <div class="education-entry">
   <h3>Bachelor of Engineering in Mechanical Engineering</h3>
-  <p>University of Pune, India</p>
+  <p><strong>University of Pune, India</strong></p>
   <p class="timeline"><strong>2009 – 2013</strong></p>
-  <p>Graduated with First Class with Distinction</p>
-  <img src="images/abc-logo.png" alt="ABC Institute Logo" width="100" />
+  <!-- <p>Graduated with First Class with Distinction</p> -->
+
+  <button class="toggle-button" onclick="openModal('bachelorModal')">Show Coursework</button>
+  <!-- <img src="images/abc-logo.png" alt="ABC Institute Logo" width="100" /> -->
 </div>
 
-<!-- Coursework Modal -->
-<div id="courseworkModal" class="modal hidden">
+<!-- MSc Coursework Modal -->
+<div id="mscModal" class="modal hidden">
   <div class="modal-content">
-    <span class="close-button" onclick="closeModal()">&times;</span>
-    <h3>Coursework</h3>
+    <span class="close-button" onclick="closeModal('mscModal')">&times;</span>
+    <h3>Coursework – MSc</h3>
     <ul>
       <li>Optimization of Complex Systems</li>
       <li>Control Systems</li>
+      <li>Systems Theory</li>
       <li>Algorithms and Data Structures</li>
       <li>Dynamical Systems</li>
       <li>Finite Element & Finite Difference Methods</li>
       <li>Applied Partial Differential Equations</li>
+      <li>And many more...</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Bachelor Coursework Modal -->
+<div id="bachelorModal" class="modal hidden">
+  <div class="modal-content">
+    <span class="close-button" onclick="closeModal('bachelorModal')">&times;</span>
+    <h3>Coursework – Bachelor</h3>
+    <ul>
+      <li>Automobile Engineering</li>
+      <li>Engineering Mathematics</li>
+      <li>Mechatronics</li>
+      <li>Engineering Mechanics</li>
+      <li>Machine Design</li>
+      <li>And many more...</li>
     </ul>
   </div>
 </div>
