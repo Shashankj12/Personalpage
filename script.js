@@ -10,5 +10,6 @@ function loadHTML(targetId, file) {
 window.onload = () => {
   loadHTML("education-content", "education.html");
   loadHTML("experience-content", "experience.html");
+  loadHTML("aboutme-content", "aboutme.html");
 };
 
