@@ -8,8 +8,8 @@ function loadHTML(targetId, file) {
 }
 
 window.onload = () => {
+  loadHTML("aboutme-content", "aboutme.html");
   loadHTML("education-content", "education.html");
   loadHTML("experience-content", "experience.html");
-  loadHTML("aboutme-content", "aboutme.html");
 };
 
