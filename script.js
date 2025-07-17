@@ -12,6 +12,7 @@ window.onload = () => {
   loadHTML("experience-content", "experience.html");
   loadHTML("experience-content", "projects.html");
   loadHTML("education-content", "education.html");
+  loadHTML("education-content", "publications.html");
 };
 
 function toggleCoursework(id) {
