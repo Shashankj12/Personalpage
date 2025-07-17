@@ -160,7 +160,7 @@ footer {
   display: none;
 }
 
-.project-link {
+.view-link {
   display: inline-block;
   margin-top: 0.5rem;
   color: #007acc;
@@ -170,9 +170,29 @@ footer {
   transition: border-bottom 0.2s ease, color 0.2s ease;
 }
 
-.project-link:hover {
+.view-link:hover {
   color: #005fa3;
   border-bottom: 2px solid #005fa3;
 }
 
+.skills {
+  margin-top: 0.5rem;
+}
+
+.skill-badge {
+  display: inline-block;
+  background-color: #e0f0ff;
+  color: #005fa3;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  margin: 4px 6px 0 0;
+  border-radius: 15px;
+  border: 1px solid #b3d7f5;
+  transition: background-color 0.2s ease;
+}
+
+.skill-badge:hover {
+  background-color: #d0eaff;
+}
 
