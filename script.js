@@ -9,8 +9,9 @@ function loadHTML(targetId, file) {
 
 window.onload = () => {
   loadHTML("aboutme-content", "aboutme.html");
-  loadHTML("education-content", "education.html");
   loadHTML("experience-content", "experience.html");
+  loadHTML("experience-content", "projects.html");
+  loadHTML("education-content", "education.html");
 };
 
 function toggleCoursework(id) {
@@ -18,19 +19,31 @@ function toggleCoursework(id) {
   section.classList.toggle('hidden');
 }
 
-function openModal() {
-  document.getElementById("courseworkModal").classList.remove("hidden");
-}
-
-function closeModal() {
-  document.getElementById("courseworkModal").classList.add("hidden");
-}
-
-// Close modal if user clicks outside the modal content
-window.onclick = function(event) {
-  const modal = document.getElementById("courseworkModal");
-  if (event.target === modal) {
-    closeModal();
+function openModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.classList.remove("hidden");
+    document.body.style.overflow = "hidden"; // optional
   }
 }
+
+function closeModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.classList.add("hidden");
+    document.body.style.overflow = "auto"; // optional
+  }
+}
+
+// Optional: Close modal if user clicks outside
+window.onclick = function(event) {
+  const modals = document.querySelectorAll('.modal');
+  modals.forEach(modal => {
+    if (event.target === modal) {
+      modal.classList.add('hidden');
+      document.body.style.overflow = "auto";
+    }
+  });
+}
+
 
