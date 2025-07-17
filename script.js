@@ -47,4 +47,34 @@ window.onclick = function(event) {
   });
 }
 
+function showTab(tabId) {
+  const allSections = document.querySelectorAll('.tab-content');
+  const allButtons = document.querySelectorAll('.tab-button');
+
+  allSections.forEach(section => section.classList.remove('active'));
+  allButtons.forEach(button => button.classList.remove('active'));
+
+  const targetSection = document.getElementById(tabId);
+  if (targetSection) {
+    targetSection.classList.add('active');
+  }
+
+  // Set active button by matching tabId to its button
+  const matchingButton = document.querySelector(`.tab-button[data-tab="${tabId}"]`);
+  if (matchingButton) {
+    matchingButton.classList.add('active');
+  }
+
+  // Update URL hash
+  history.replaceState(null, null, `#${tabId}`);
+}
+
+
+window.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash?.substring(1);
+  if (hash) {
+    showTab(hash); // Just use your existing tab-switching function
+  }
+});
+
 
