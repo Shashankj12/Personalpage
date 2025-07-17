@@ -10,9 +10,9 @@ function loadHTML(targetId, file) {
 window.onload = () => {
   loadHTML("aboutme-content", "aboutme.html");
   loadHTML("experience-content", "experience.html");
-  loadHTML("experience-content", "projects.html");
+  loadHTML("projects-content", "projects.html");
   loadHTML("education-content", "education.html");
-  loadHTML("education-content", "publications.html");
+  loadHTML("publications-content", "publications.html");
 };
 
 function toggleCoursework(id) {
