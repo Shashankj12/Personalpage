@@ -35,9 +35,14 @@ nav ul li a {
 }
 
 .hero {
-  padding: 2rem;
+  padding: 3rem 1rem 2rem; /* Add top padding */
   background: #eaeaea;
   text-align: center;
+  transition: opacity 0.5s ease, max-height 0.5s ease;
+  opacity: 1;
+  max-height: 300px;
+  overflow: hidden;
+  margin-top: 60px; /* ✅ Make space below the sticky header */
 }
 
 section {
@@ -286,12 +291,6 @@ header h1 {
   text-align: center;
 }
 
-.hero {
-  transition: opacity 0.5s ease, max-height 0.5s ease;
-  opacity: 1;
-  max-height: 300px; /* adjust as needed */
-  overflow: hidden;
-}
 
 header.scrolled h1 {
   font-size: 1.5rem;
@@ -309,6 +308,11 @@ body.dark .modal-content {
   background-color: #2b2b2b;
   color: #eee;
   border-left-color: #3399ff;
+}
+
+body.dark .hero {
+  background-color: #2b2b2b;
+  color: #eee;
 }
 
 body.dark .tab-buttons {
@@ -344,6 +348,10 @@ body.dark footer {
 
 /* To ensure that tabs and headers scale down correctly*/
 @media (max-width: 600px) {
+  .hero {
+    margin-top: 80px;
+  }
+
   header h1 {
     font-size: 1.2rem;
   }
