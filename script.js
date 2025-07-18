@@ -3,6 +3,10 @@ function loadHTML(targetId, file) {
     .then(response => response.text())
     .then(data => {
       document.getElementById(targetId).innerHTML = data;
+
+      // After inserting HTML, hide all modals in that section
+      const target = document.getElementById(targetId);
+      target.querySelectorAll('.modal').forEach(m => m.classList.add('hidden'));
     })
     .catch(err => console.error(`Error loading ${file}:`, err));
 }
