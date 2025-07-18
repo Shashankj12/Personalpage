@@ -227,6 +227,7 @@ footer {
   top: 60px; /* height of your header */
   z-index: 1050;
   background-color: inherit; /* keep seamless */
+  border-bottom: 1px solid #ccc;
 }
 
 .tab-buttons {
