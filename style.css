@@ -43,6 +43,7 @@ nav ul li a {
   opacity: 1;
   max-height: 300px;
   overflow: hidden;
+  padding-bottom: 2rem; /* add extra breathing room */
 }
 
 section {
@@ -232,6 +233,11 @@ footer {
   padding: 0.5rem;
   border-bottom: 2px solid #ccc;
   margin: 0; /* add if needed */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.hero + .tab-buttons {
+  margin-top: -2px; /* fix spacing if needed */
 }
 
 .tab-button {
