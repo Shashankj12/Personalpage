@@ -5,6 +5,7 @@ body {
   line-height: 1.6;
   color: #333;
   background-color: #f9f9f9;
+  scroll-behavior: smooth;
 }
 
 nav {
@@ -198,9 +199,8 @@ footer {
 
 .tab-buttons {
   position: sticky;
-  top: 60px; /* height of header */
+  top: 60px; /* match header height exactly */
   z-index: 1000;
-
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -244,21 +244,21 @@ header {
   top: 0;
   z-index: 1100;
   background: #333;
-  transition: all 0.5s ease;
+  transition: background-color 0.5s ease;
+  height: 60px; /* fix the height */
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
 }
 
 header h1 {
-  text-align: center;
   color: white;
   margin: 0;
-  transition: all 0.5s ease;
-  padding-left: 0;
-}
-
-header.scrolled h1 {
+  font-size: 1.8rem;
+  transition: transform 0.3s ease, font-size 0.3s ease;
+  transform-origin: left center;
+  flex-grow: 1;
   text-align: left;
-  padding-left: 20px;
-  font-size: 1.5rem;
 }
 
 .hero {
@@ -272,4 +272,8 @@ header.scrolled h1 {
   opacity: 0;
   max-height: 0;
   pointer-events: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
 }
+
