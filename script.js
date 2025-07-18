@@ -81,22 +81,17 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// Update script.js scroll handling
-
 function handleScroll() {
   const header = document.querySelector('header');
-  const hero = document.querySelector('.hero');
 
   if (window.scrollY > 50) {
     header.classList.add('scrolled');
-    hero.classList.add('hidden');
   } else {
     header.classList.remove('scrolled');
-    hero.classList.remove('hidden');
   }
 }
 
+
 window.addEventListener('scroll', handleScroll);
 window.addEventListener('load', handleScroll);  // Make sure state is synced on load
-
 
