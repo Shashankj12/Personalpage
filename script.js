@@ -77,4 +77,17 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('header');
+  const hero = document.querySelector('.hero');
+
+  if (window.scrollY > 50) {
+    header.classList.add('scrolled');
+    hero.classList.add('hidden');
+  } else {
+    header.classList.remove('scrolled');
+    hero.classList.remove('hidden');
+  }
+});
+
 
