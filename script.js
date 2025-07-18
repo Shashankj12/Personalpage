@@ -7,13 +7,16 @@ function loadHTML(targetId, file) {
     .catch(err => console.error(`Error loading ${file}:`, err));
 }
 
-window.onload = () => {
+window.addEventListener('load', () => {
   loadHTML("aboutme-content", "aboutme.html");
   loadHTML("experience-content", "experience.html");
   loadHTML("projects-content", "projects.html");
   loadHTML("education-content", "education.html");
   loadHTML("publications-content", "publications.html");
-};
+
+  handleScroll();  // sync scroll state on load
+});
+
 
 function toggleCoursework(id) {
   const section = document.getElementById(id);
@@ -77,7 +80,10 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-window.addEventListener('scroll', () => {
+
+// Update script.js scroll handling
+
+function handleScroll() {
   const header = document.querySelector('header');
   const hero = document.querySelector('.hero');
 
@@ -88,6 +94,9 @@ window.addEventListener('scroll', () => {
     header.classList.remove('scrolled');
     hero.classList.remove('hidden');
   }
-});
+}
+
+window.addEventListener('scroll', handleScroll);
+window.addEventListener('load', handleScroll);  // Make sure state is synced on load
 
 
