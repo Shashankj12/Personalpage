@@ -103,7 +103,7 @@ footer {
   width: 100%;
 }
 
-.education-entry {
+.entry-box {
   background: white;
   padding: 1rem;
   margin: 1rem 0;
@@ -112,20 +112,19 @@ footer {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.experience-entry {
-  background: white;
-  padding: 1rem;
-  margin: 1rem 0;
-  border-left: 4px solid #007acc;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
-.timeline {
-  color: #007acc;
+.entry-header .timeline {
+  margin: 0;
+  font-size: 1rem;
   font-weight: bold;
-  font-size: 1.1rem;
-  margin-top: 0.5rem;
+  color: #007acc;
 }
 
 /* Modal styles */
@@ -178,11 +177,6 @@ footer {
 
 .close-button:hover {
   color: #000;
-}
-
-/* Hide element */
-.hidden {
-  display: none;
 }
 
 .view-link {
@@ -302,8 +296,7 @@ body.dark {
 }
 
 body.dark .project,
-body.dark .education-entry,
-body.dark .experience-entry,
+body.dark .entry-box,
 body.dark .modal-content {
   background-color: #2b2b2b;
   color: #eee;
@@ -364,6 +357,15 @@ body.dark footer {
   .modal-content {
     padding: 1rem;
     max-width: 90%;
+  }
+
+  .entry-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .entry-header .timeline {
+    margin-top: 0.3rem;
   }
 
   .container {
