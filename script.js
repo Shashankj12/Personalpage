@@ -55,18 +55,29 @@ window.onclick = function(event) {
 }
 
 function showTab(tabId) {
-  const tabs = document.querySelectorAll('.tab-content');
-  const buttons = document.querySelectorAll('.tab-button');
+  const allSections = document.querySelectorAll('.tab-content');
+  const allButtons = document.querySelectorAll('.tab-button');
 
-  tabs.forEach(tab => tab.classList.remove('active'));
-  buttons.forEach(btn => btn.classList.remove('active'));
+  allSections.forEach(section => section.classList.remove('active'));
+  allButtons.forEach(button => button.classList.remove('active'));
 
-  document.getElementById(tabId).classList.add('active');
-  document.querySelector(`[data-tab="${tabId}"]`).classList.add('active');
+  const targetSection = document.getElementById(tabId);
+  if (targetSection) {
+    targetSection.classList.add('active');
+  }
 
-  // 💡 Prevent jump on tab switch
-  const currentScroll = window.scrollY;
-  window.scrollTo({ top: currentScroll });
+  // Set active button by matching tabId to its button
+  const matchingButton = document.querySelector(`.tab-button[data-tab="${tabId}"]`);
+  if (matchingButton) {
+    matchingButton.classList.add('active');
+  }
+
+  // Update URL hash
+  history.replaceState(null, null, `#${tabId}`);
+
+  // ✅ Fix scroll jump
+  const scrollY = window.scrollY;
+  requestAnimationFrame(() => window.scrollTo({ top: scrollY }));
 }
 
 

@@ -222,18 +222,22 @@ footer {
   background-color: #d0eaff;
 }
 
-.tab-buttons {
+.sticky-tabs-wrapper {
   position: sticky;
-  top: 60px; /* match header height exactly */
+  top: 60px; /* height of your header */
   z-index: 1050;
+  background-color: inherit; /* keep seamless */
+}
+
+.tab-buttons {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   background-color: #f0f0f0;
   padding: 0.5rem;
   border-bottom: 2px solid #ccc;
-  margin: 0; /* add if needed */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin: 0;
 }
 
 .hero + .tab-buttons {
@@ -313,6 +317,10 @@ body.dark .modal-content {
 body.dark .hero {
   background-color: #2b2b2b;
   color: #eee;
+}
+
+body.dark .sticky-tabs-wrapper {
+  background-color: #222;
 }
 
 body.dark .tab-buttons {
