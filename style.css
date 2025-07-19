@@ -35,7 +35,7 @@ nav ul li a {
 }
 
 .hero {
-  padding-top: 60px; /* instead of margin, push content down */
+  padding-top: 120px; /* instead of margin, push content down */
   padding: 3rem 1rem 2rem; /* Add top padding */
   background: #eaeaea;
   text-align: center;
