@@ -4,12 +4,16 @@ function loadHTML(targetId, file) {
     .then(data => {
       document.getElementById(targetId).innerHTML = data;
 
-      // After inserting HTML, hide all modals in that section
+      // ✅ Ensure all modals inside that section are hidden after insert
       const target = document.getElementById(targetId);
-      target.querySelectorAll('.modal').forEach(m => m.classList.add('hidden'));
+      target.querySelectorAll('.modal').forEach(m => {
+        m.classList.add('hidden');
+        m.style.display = "none"; // Optional backup if CSS doesn't apply fast enough
+      });
     })
     .catch(err => console.error(`Error loading ${file}:`, err));
 }
+
 
 window.addEventListener('load', () => {
   loadHTML("aboutme-content", "aboutme.html");
