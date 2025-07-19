@@ -2,17 +2,12 @@ function loadHTML(targetId, file) {
   fetch(file)
     .then(response => response.text())
     .then(data => {
+      document.getElementById(targetId).innerHTML = data;
+
+      // ✅ Ensure all modals inside that section are hidden after insert
       const target = document.getElementById(targetId);
-      target.innerHTML = data;
-
-      // Hide any modals just in case
-      target.querySelectorAll('.modal').forEach(m => m.classList.add('hidden'));
-
-      // Attach event listeners for modal buttons
-      target.querySelectorAll('[data-modal-open]').forEach(button => {
-        button.addEventListener('click', () => {
-          openModal(button.getAttribute('data-modal-open'));
-        });
+      target.querySelectorAll('.modal').forEach(m => {
+        m.classList.add('hidden');
       });
     })
     .catch(err => console.error(`Error loading ${file}:`, err));
