@@ -17,8 +17,6 @@ window.addEventListener('load', () => {
   loadHTML("projects-content", "projects.html");
   loadHTML("education-content", "education.html");
   loadHTML("publications-content", "publications.html");
-
-  handleScroll();  // sync scroll state on load
 });
 
 
@@ -87,21 +85,6 @@ window.addEventListener('DOMContentLoaded', () => {
     showTab(hash); // Just use your existing tab-switching function
   }
 });
-
-
-function handleScroll() {
-  const header = document.querySelector('header');
-
-  if (window.scrollY > 50) {
-    header.classList.add('scrolled');
-  } else {
-    header.classList.remove('scrolled');
-  }
-}
-
-
-window.addEventListener('scroll', handleScroll);
-window.addEventListener('load', handleScroll);  // Make sure state is synced on load
 
 function toggleDarkMode() {
   document.body.classList.toggle('dark');

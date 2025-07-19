@@ -34,18 +34,6 @@ nav ul li a {
   text-decoration: none;
 }
 
-.hero {
-  padding-top: 120px; /* instead of margin, push content down */
-  padding: 3rem 1rem 2rem; /* Add top padding */
-  background: #eaeaea;
-  text-align: center;
-  transition: opacity 0.5s ease, max-height 0.5s ease;
-  opacity: 1;
-  max-height: 300px;
-  overflow: hidden;
-  padding-bottom: 2rem; /* add extra breathing room */
-}
-
 section {
   padding: 2rem;
 }
@@ -295,11 +283,6 @@ header h1 {
   text-align: center;
 }
 
-
-header.scrolled h1 {
-  font-size: 1.5rem;
-}
-
 body.dark {
   background-color: #1e1e1e;
   color: #eee;
@@ -311,11 +294,6 @@ body.dark .modal-content {
   background-color: #2b2b2b;
   color: #eee;
   border-left-color: #3399ff;
-}
-
-body.dark .hero {
-  background-color: #2b2b2b;
-  color: #eee;
 }
 
 body.dark .sticky-tabs-wrapper {

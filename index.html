@@ -11,23 +11,19 @@
   <header>
     <h1>Shashank Jadhav</h1>
     <button onclick="toggleDarkMode()" class="toggle-button" style="margin-left: auto;">🌓</button>
+
+    <nav class="tab-buttons">
+      <button class="tab-button active" data-tab="about" onclick="showTab('about')">About</button>
+      <button class="tab-button" data-tab="experience" onclick="showTab('experience')">Experience</button>
+      <button class="tab-button" data-tab="projects" onclick="showTab('projects')">Projects</button>
+      <button class="tab-button" data-tab="publications" onclick="showTab('publications')">Publications</button>
+      <button class="tab-button" data-tab="education" onclick="showTab('education')">Education</button>
+      <button class="tab-button" data-tab="contact" onclick="showTab('contact')">Contact</button>
+    </nav>
   </header>
 
-  <section class="hero">
-    <h2>Hi, I'm Shahsank Jadhav 👋</h2>
-    <p>
-      💻 Software Dev &nbsp;|&nbsp;
-      <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="C++" style="height: 1em; vertical-align: middle;"> C++ &nbsp;|&nbsp;
-      🚀 Optimization &nbsp;|&nbsp;
-      🔬 Research &nbsp;|&nbsp;
-      🧮 Compilers &nbsp;|&nbsp;
-      🔧 Embedded Systems &nbsp;|&nbsp;
-      📐 Control Systems &nbsp;|&nbsp;
-      🚗 Automotive
-    </p>
-  </section>
 
-  <!-- Tab Navigation -->
+  <!-- Tab Navigation
   <div class="sticky-tabs-wrapper">
     <div class="tab-buttons">
       <button class="tab-button active" data-tab="about" onclick="showTab('about')">About</button>
@@ -37,7 +33,7 @@
       <button class="tab-button" data-tab="education" onclick="showTab('education')">Education</button>
       <button class="tab-button" data-tab="contact" onclick="showTab('contact')">Contact</button>
     </div>
-  </div>
+  </div> -->
 
   <div class="container">
     <section id="about" class="tab-content active">
