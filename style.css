@@ -250,19 +250,30 @@ header {
   z-index: 1100;
   background: #333;
   height: 60px;
+  min-height: 60px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0 20px;
-  box-sizing: border-box; /* important */
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
 }
 
 header h1 {
   color: white;
   margin: 0;
+  padding: 0;
   font-size: 1.5rem;
-  flex-grow: 1;
-  text-align: left;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+header .toggle-button {
+  position: absolute;
+  right: 20px;
 }
 
 .toggle-button {
