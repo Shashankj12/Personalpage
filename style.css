@@ -115,6 +115,10 @@ footer {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.modal.hidden {
+  display: none !important;
+}
+
 .modal-content {
   background-color: #fff;
   padding: 1.5rem;
@@ -126,10 +130,6 @@ footer {
   max-height: 90vh;
   overflow-y: auto;
   animation: fadeInUp 0.3s ease;
-}
-
-.modal:not(.hidden) {
-  display: none;
 }
 
 @keyframes fadeInUp {
