@@ -17,23 +17,6 @@ body {
   flex-direction: column;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-}
-
 section {
   padding: 2rem;
 }
@@ -90,6 +73,7 @@ footer {
   margin: 0 auto;
   padding: 0 1rem;
   width: 100%;
+  padding-top: 130px; /* applies globally */
 }
 
 .entry-box {
@@ -214,8 +198,7 @@ footer {
   position: sticky;
   top: 60px; /* height of your header */
   z-index: 1050;
-  background-color: inherit; /* keep seamless */
-  border-bottom: 1px solid #ccc;
+  background-color: inherit;
   padding: 0;
   margin: 0; 
 }
@@ -266,22 +249,26 @@ header {
   top: 0;
   z-index: 1100;
   background: #333;
-  transition: background-color 0.5s ease;
-  height: 60px; /* fix the height */
+  height: 60px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 0 20px;
+  box-sizing: border-box; /* important */
 }
 
 header h1 {
   color: white;
   margin: 0;
-  font-size: 1.8rem;
-  transition: transform 0.3s ease, font-size 0.3s ease;
-  transform-origin: left center;
+  font-size: 1.5rem;
   flex-grow: 1;
-  text-align: center;
+  text-align: left;
 }
+
+.toggle-button {
+  margin: 0; /* remove margin-left:auto */
+}
+
 
 body.dark {
   background-color: #1e1e1e;
@@ -358,15 +345,6 @@ body.dark footer {
 
   .container {
     padding: 0 0.5rem;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav ul li {
-    margin-bottom: 0.5rem;
   }
 }
 
