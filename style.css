@@ -355,10 +355,6 @@ body.dark footer {
 
 /* To ensure that tabs and headers scale down correctly*/
 @media (max-width: 600px) {
-  .hero {
-    margin-top: 60px;
-  }
-
   header h1 {
     font-size: 1.2rem;
   }
