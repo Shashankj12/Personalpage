@@ -14,13 +14,13 @@ function loadHTML(targetId, file) {
 }
 
 window.addEventListener('load', () => {
-  loadHTML("home-content", "aboutme.html");
+  loadHTML("home-content", "home.html");
   loadHTML("aboutme-content", "aboutme.html");
   loadHTML("experience-content", "experience.html");
   loadHTML("projects-content", "projects.html");
   loadHTML("education-content", "education.html");
   loadHTML("publications-content", "publications.html");
-  loadHTML("publications-content", "certifications.html");
+  loadHTML("certifications-content", "certifications.html");
 
   // Set dark mode
   const isDark = localStorage.getItem('darkMode') === 'true';
