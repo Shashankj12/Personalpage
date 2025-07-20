@@ -20,6 +20,7 @@ window.addEventListener('load', () => {
   loadHTML("projects-content", "projects.html");
   loadHTML("education-content", "education.html");
   loadHTML("publications-content", "publications.html");
+  loadHTML("publications-content", "certifications.html");
 
   // Set dark mode
   const isDark = localStorage.getItem('darkMode') === 'true';
