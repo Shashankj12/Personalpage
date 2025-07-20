@@ -14,6 +14,7 @@ function loadHTML(targetId, file) {
 }
 
 window.addEventListener('load', () => {
+  loadHTML("home-content", "aboutme.html");
   loadHTML("aboutme-content", "aboutme.html");
   loadHTML("experience-content", "experience.html");
   loadHTML("projects-content", "projects.html");
