@@ -73,7 +73,7 @@ footer {
   margin: 0 auto;
   padding: 0 1rem;
   width: 100%;
-  padding-top: 130px; /* applies globally */
+  padding-top: 100px; /* applies globally */
 }
 
 .entry-box {
