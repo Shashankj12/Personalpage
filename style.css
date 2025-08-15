@@ -411,6 +411,16 @@ body.dark .cert-list li {
   margin-bottom: 0.5rem;
 }
 
+.icon-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  float: right;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
 .keywords {
   display: flex;
   flex-wrap: wrap;       /* allows multiple spans per line */
