@@ -402,12 +402,30 @@ body.dark .cert-list li {
 }
 
 .profile-pic {
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   object-fit: cover;
   float: right;
   margin-left: 1rem;
   margin-bottom: 0.5rem;
+}
+
+.keywords {
+  display: flex;
+  flex-wrap: wrap;       /* allows multiple spans per line */
+  gap: 0.5rem;           /* spacing between keywords */
+  margin-top: 0.5rem;
+}
+
+.keywords span {
+  white-space: nowrap;   /* keep individual keyword together */
+}
+
+/* Add | between keywords except the last one */
+.keywords span:not(:last-child)::after {
+  content: " |";
+  margin-left: 0.5rem;
+  color: #555;           /* optional: color for the separator */
 }
 
