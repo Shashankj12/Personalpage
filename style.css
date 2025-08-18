@@ -466,14 +466,18 @@ body.dark .cert-list li {
 
   /* Project entry-box layout for mobile */
   .entry-box {
-    flex-direction: column;   /* stack logo and text vertically */
-    align-items: center;      /* center logo and text */
-    text-align: center;       /* center-align text for consistency */
+    flex-direction: column;   
+    align-items: center;      
+  }
+
+  .entry-box img {
+    margin-bottom: 1rem;      /* keep spacing below the logo */
   }
 
   .entry-box div {
-    flex: unset;              /* remove forced flex sizing */
-    width: 100%;              /* let text take full width */
+    flex: unset;              
+    width: 100%;              
+    text-align: left;         /* ✅ left-align the text */
   }
 }
 
