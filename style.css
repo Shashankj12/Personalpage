@@ -332,35 +332,6 @@ body.dark footer {
   color: #ccc;
 }
 
-/* To ensure that tabs and headers scale down correctly*/
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 1.2rem;
-  }
-
-  .tab-button {
-    padding: 0.5rem 0.8rem;
-    font-size: 0.9rem;
-  }
-
-  .modal-content {
-    padding: 1rem;
-    max-width: 90%;
-  }
-
-  .entry-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .entry-header .timeline {
-    margin-top: 0.3rem;
-  }
-
-  .container {
-    padding: 0 0.5rem;
-  }
-}
 
 .cert-group {
   margin-top: 1.5rem;
@@ -437,5 +408,72 @@ body.dark .cert-list li {
   content: " |";
   margin-left: 0.5rem;
   color: #555;           /* optional: color for the separator */
+}
+
+
+/* To ensure that tabs and headers scale down correctly*/
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  .tab-button {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .modal-content {
+    padding: 1rem;
+    max-width: 90%;
+  }
+
+  .entry-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .entry-header .timeline {
+    margin-top: 0.3rem;
+  }
+
+  .container {
+    padding: 0 0.5rem;
+  }
+
+  /* Profile picture fix */
+  .profile-pic {
+    float: none;              /* remove side float */
+    display: block;           /* make it behave like block */
+    margin: 0 auto 1rem auto; /* center horizontally, add spacing below */
+    width: 200px;             /* scale down for smaller screens */
+    height: 200px;
+  }
+
+  /* Keywords go below profile pic */
+  .keywords {
+    justify-content: center;  /* center align keywords */
+    margin-top: 1rem;
+  }
+
+  /* Project logo fix */
+  .icon-pic {
+    float: none;
+    display: block;
+    margin: 0 auto 1rem auto; /* center logo with spacing below */
+    width: 120px;             /* slightly smaller for mobile */
+    height: 120px;
+  }
+
+  /* Project entry-box layout for mobile */
+  .entry-box {
+    flex-direction: column;   /* stack logo and text vertically */
+    align-items: center;      /* center logo and text */
+    text-align: center;       /* center-align text for consistency */
+  }
+
+  .entry-box div {
+    flex: unset;              /* remove forced flex sizing */
+    width: 100%;              /* let text take full width */
+  }
 }
 
