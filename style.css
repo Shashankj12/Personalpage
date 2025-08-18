@@ -376,6 +376,18 @@ body.dark .cert-list li {
   border-left-color: #3399ff;
 }
 
+.multi-line-cert {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.multi-line-cert .cert-text {
+  display: flex;
+  flex-direction: column; /* stack lines */
+}
+
 .profile-pic {
   width: 300px;
   height: 300px;
@@ -491,6 +503,16 @@ body.dark .cert-list li {
 
   .cert-list li span:last-child {
     margin-top: 0.4rem; /* add a little spacing above the link */
+  }
+
+  .multi-line-cert {
+    flex-direction: column;  /* stack on small screens */
+    align-items: flex-start;
+  }
+
+  .multi-line-cert .skill-badge {
+    margin-top: 0.5rem; /* add spacing below text */
+    align-self: flex-start;
   }
 }
 
