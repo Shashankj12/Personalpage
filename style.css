@@ -1,3 +1,10 @@
+/* Include padding/margin in width calculation */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -10,11 +17,13 @@ body {
 
 html, body {
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
 
 section {
@@ -71,7 +80,7 @@ footer {
   flex: 1;
   max-width: 900px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 0.5rem;
   width: 100%;
   padding-top: 80px; /* applies globally */
 }
@@ -161,7 +170,6 @@ footer {
   border-bottom: none;
 }
 
-
 .view-link:hover {
   color: #005fa3;
   border-bottom: 2px solid #005fa3;
@@ -183,6 +191,7 @@ footer {
   border: 1px solid #b3d7f5;
   transition: background-color 0.2s ease;
   white-space: nowrap;
+  overflow-wrap: break-word;
 }
 
 .skill-badge a {
@@ -196,6 +205,11 @@ footer {
 
 .skill-badge:hover {
   background-color: #d0eaff;
+}
+
+header, .sticky-tabs-wrapper {
+  width: 100%;
+  max-width: 100%;
 }
 
 .sticky-tabs-wrapper {
@@ -456,6 +470,25 @@ body.dark .cert-list li {
     padding: 0 0.5rem;
   }
 
+  section {
+    padding: 1rem; /* reduce from 2rem */
+  }
+
+  .project,
+  .entry-box {
+    padding: 0.8rem; /* slightly smaller */
+    margin: 0.5rem 0; /* closer together */
+  }
+
+  .skills,
+  .keywords {
+    margin-top: 0.3rem; /* tighter spacing */
+  }
+
+  .tab-buttons {
+    padding: 0.3rem;
+  }
+
   /* Profile picture fix */
   .profile-pic {
     float: none;              /* remove side float */
@@ -487,6 +520,8 @@ body.dark .cert-list li {
   }
 
   .entry-box img {
+    max-width: 100%;
+    height: auto;
     margin-bottom: 1rem;      /* keep spacing below the logo */
   }
 
@@ -499,6 +534,8 @@ body.dark .cert-list li {
   .cert-list li {
     flex-direction: column;  /* stack items vertically */
     align-items: flex-start; /* left align */
+    padding: 0.6rem 1rem; /* slightly smaller */
+    margin-bottom: 0.4rem;
   }
 
   .cert-list li span:last-child {
@@ -508,11 +545,15 @@ body.dark .cert-list li {
   .multi-line-cert {
     flex-direction: column;  /* stack on small screens */
     align-items: flex-start;
+    padding: 0.6rem 1rem; /* slightly smaller */
+    margin-bottom: 0.4rem;
   }
 
   .multi-line-cert .skill-badge {
     margin-top: 0.5rem; /* add spacing below text */
     align-self: flex-start;
+    white-space: normal;       /* allow wrapping */
+    overflow-wrap: break-word; /* break long words if needed */
   }
 }
 
